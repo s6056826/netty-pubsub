@@ -6,8 +6,11 @@ import java.util.stream.IntStream;
 
 import org.apache.log4j.PropertyConfigurator;
 
+import cn.dbw.disruptor.DisruptorBoot;
+import cn.dbw.disruptor.MessageConsumer;
 import cn.dbw.server.BrokeServer;
 import cn.dbw.server.HttpServer;
+import cn.dbw.server.MessageConsumerImpl4Server;
 
 public class Boot {
 	
@@ -15,6 +18,9 @@ public class Boot {
 	
 	
 	public void start(){
+		//³õÊ¼»¯disruptor
+		DisruptorBoot.getInstance().init(4, MessageConsumerImpl4Server.class);
+		
 		executorService.submit(()->{
 			BrokeServer.INSTANCE.start();
 		});

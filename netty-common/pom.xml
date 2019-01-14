@@ -27,5 +27,16 @@
          <groupId>org.jodd</groupId>
         <artifactId>jodd-all</artifactId>
         </dependency>
+        
+            <!-- Netty -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+          <!-- dirsuptor 高性能无锁并发框架 -->
+        <dependency>
+			<groupId>com.bfxy</groupId>
+			<artifactId>disruptor-netty-com</artifactId>
+        </dependency>
   </dependencies>
 </project>

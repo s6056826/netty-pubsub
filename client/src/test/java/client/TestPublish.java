@@ -37,7 +37,7 @@ public class TestPublish {
 //			e.printStackTrace();
 //		}
 		
-		for(int i=0;i<500;i++){
+		for(int i=0;i<1000;i++){
 			client.publish("mm","love mm"+i);
 		}
 		client.shutdown();

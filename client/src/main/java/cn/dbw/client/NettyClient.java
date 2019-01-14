@@ -2,6 +2,7 @@ package cn.dbw.client;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import cn.dbw.client.handler.IdleStateTrigger;
 import cn.dbw.client.handler.MessageEncoder;
@@ -77,7 +78,7 @@ public class NettyClient {
 	
 	public void stop(){
 			if(loopGroup!=null){
-				loopGroup.shutdownGracefully();
+				loopGroup.shutdownGracefully(5, 10, TimeUnit.SECONDS);
 				executorService.shutdown();
 			}
 	}

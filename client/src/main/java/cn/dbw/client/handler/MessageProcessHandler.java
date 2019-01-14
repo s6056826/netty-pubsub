@@ -1,6 +1,8 @@
 package cn.dbw.client.handler;
 
 import cn.dbw.config.FuncodeEnum;
+import cn.dbw.disruptor.MessageProducer;
+import cn.dbw.disruptor.RingBufferWorkerPoolFactory;
 import cn.dbw.dto.Message;
 import cn.dbw.event.EventBus;
 import io.netty.channel.ChannelHandlerContext;
@@ -11,8 +13,10 @@ public class MessageProcessHandler extends SimpleChannelInboundHandler<Message>{
 	
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
-		FuncodeEnum funCode = msg.getFunCode();
-		EventBus.handler.sendMsg(msg, funCode);
+		//∑≈»Îdisruptor»›∆˜÷–
+		String producerId = "product:sessionId:001";
+	    MessageProducer messageProducer = RingBufferWorkerPoolFactory.getInstance().getMessageProducer(producerId);
+	    messageProducer.onData(ctx, msg);
 	}
 	
 	@Override

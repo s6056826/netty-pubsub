@@ -6,6 +6,7 @@ import cn.dbw.api.Authable;
 import cn.dbw.api.PubAndSubClient;
 import cn.dbw.config.FuncodeEnum;
 import cn.dbw.config.ServerConfig;
+import cn.dbw.disruptor.DisruptorBoot;
 import cn.dbw.dto.Message;
 import cn.dbw.event.EventBus;
 import cn.dbw.util.MD5Util;
@@ -20,6 +21,8 @@ public class NettyPubAndSubClient implements PubAndSubClient,Authable{
 	
 	
 	public static NettyPubAndSubClient getInstance(){
+		//³õÊ¼»¯DisruptorÈÝÆ÷
+		 DisruptorBoot.getInstance().init(4, MessageConsumerImpl4Client.class);
 		 return nettyPubAndSubClient;
 	}
 	

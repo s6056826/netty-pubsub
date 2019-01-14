@@ -1,41 +1,40 @@
 package cn.dbw.po;
 
-import cn.dbw.config.FuncodeEnum;
 import cn.dbw.dto.Message;
-
+import io.netty.channel.ChannelHandlerContext;
+//2019/1/14  ÐÞ¸Ä
 public class MessageWrapper {
 	
-	private byte fixHead=(byte) 0xA8;
 	
-	private FuncodeEnum funcodeEnum=null;
 	
-	private Object message;
+	private ChannelHandlerContext ctx;
 	
+	private Message message;
 
-	public MessageWrapper( FuncodeEnum funcodeEnum, Object message) {
-		this.funcodeEnum = funcodeEnum;
-		this.message = message;
+	public ChannelHandlerContext getCtx() {
+		return ctx;
 	}
 
-	public byte getFixHead() {
-		return fixHead;
+	public void setCtx(ChannelHandlerContext ctx) {
+		this.ctx = ctx;
 	}
 
-
-	public FuncodeEnum getFuncodeEnum() {
-		return funcodeEnum;
-	}
-
-	public void setFuncodeEnum(FuncodeEnum funcodeEnum) {
-		this.funcodeEnum = funcodeEnum;
-	}
-
-	public Object getMessage() {
+	public Message getMessage() {
 		return message;
 	}
 
-	public void setMessage(Object message) {
+	public void setMessage(Message message) {
 		this.message = message;
+	}
+
+	public MessageWrapper(ChannelHandlerContext ctx, Message message) {
+		this.ctx = ctx;
+		this.message = message;
+	}
+	
+
+	public MessageWrapper() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -77,6 +77,13 @@
      <artifactId>zkclient</artifactId>
      <version>0.1</version>
  </dependency>
+ 
+  <!-- dirsuptor 高性能无锁并发框架 -->
+ <dependency>
+			<groupId>com.bfxy</groupId>
+			<artifactId>disruptor-netty-com</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
          </dependencies> 
   </dependencyManagement>
   
