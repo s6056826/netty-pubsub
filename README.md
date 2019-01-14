@@ -29,6 +29,7 @@ netty+zookeeper分布式发布订阅系统
 1.broker启动src/main/java 下的 Boot.java
 
 2.client测试
+```
   //创建客户端
   NettyPubAndSubClient client = NettyPubAndSubClient.getInstance();
   //客户端连接
@@ -66,7 +67,8 @@ netty+zookeeper分布式发布订阅系统
     //发送广播
     client.broadcast("hello 广播");
     //优雅关闭
-		client.shutdown();
+    client.shutdown();
+```		
     
 
 #### 参与贡献
