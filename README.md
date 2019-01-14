@@ -8,7 +8,7 @@
 #### 软件架构
 软件架构说明
 
-netty+zookeeper分布式发布订阅系统
+netty+zookeeper+disruptor分布式发布订阅系统
 
 
 #### 安装教程
