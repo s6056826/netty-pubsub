@@ -1,0 +1,70 @@
+2019-01-03 15:41:23  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:41:23  [ nioEventLoopGroup-2-1:22 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:47:23  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:47:23  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:50:15  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:50:15  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:51:16  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:51:16  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:52:38  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:52:38  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:54:36  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:55:03  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:55:03  [ nioEventLoopGroup-5-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 15:57:41  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 15:57:41  [ nioEventLoopGroup-5-1:10 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:01:04  [ nioEventLoopGroup-3-1:202926 ] - [ INFO ]  【主题订阅】/127.0.0.1:25254 topic-》b3cd915d7580
+2019-01-03 16:01:24  [ nioEventLoopGroup-3-2:222719 ] - [ INFO ]  【主题订阅】/127.0.0.1:25273 topic-》b3cd915d7580
+2019-01-03 16:01:24  [ nioEventLoopGroup-3-2:222722 ] - [ INFO ]  【主题订阅】/127.0.0.1:25273 topic-》faf0eaf280c0
+2019-01-03 16:10:30  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:10:30  [ nioEventLoopGroup-5-1:11 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:10:43  [ nioEventLoopGroup-2-1:12512 ] - [ INFO ]  【主题订阅】/127.0.0.1:25522 topic-》faf0eaf280c0
+2019-01-03 16:21:35  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:21:35  [ nioEventLoopGroup-5-1:10 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:24:12  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:24:12  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:24:35  [ nioEventLoopGroup-5-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:24:35  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:26:42  [ nioEventLoopGroup-5-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:26:42  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:28:18  [ nioEventLoopGroup-2-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:28:18  [ nioEventLoopGroup-4-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:28:32  [ nioEventLoopGroup-3-1:14632 ] - [ INFO ]  【主题订阅】/127.0.0.1:26204 topic-》faf0eaf280c0
+2019-01-03 16:28:37  [ nioEventLoopGroup-3-2:19574 ] - [ WARN ]  An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException
+	at java.lang.String.<init>(String.java:566)
+	at cn.dbw.server.handler.TopicManagerHandler.channelRead0(TopicManagerHandler.java:39)
+	at cn.dbw.server.handler.TopicManagerHandler.channelRead0(TopicManagerHandler.java:15)
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at cn.dbw.server.handler.MessageProcessHandler.channelRead0(MessageProcessHandler.java:26)
+	at cn.dbw.server.handler.MessageProcessHandler.channelRead0(MessageProcessHandler.java:1)
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:161)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:161)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:254)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:333)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:319)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:787)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:130)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-03 16:29:56  [ nioEventLoopGroup-5-1:0 ] - [ INFO ]  【broker已启动】ip->192.168.1.3 port->9999
+2019-01-03 16:29:56  [ nioEventLoopGroup-3-1:0 ] - [ INFO ]  【http-server已启动】ip->192.168.1.3 port->8888
+2019-01-03 16:30:11  [ nioEventLoopGroup-2-1:14469 ] - [ INFO ]  【主题订阅】/127.0.0.1:26318 topic-》b3cd915d7580
+2019-01-03 16:30:11  [ nioEventLoopGroup-2-1:14470 ] - [ INFO ]  【主题订阅】/127.0.0.1:26318 topic-》faf0eaf280c0

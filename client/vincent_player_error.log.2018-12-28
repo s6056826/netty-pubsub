@@ -1,0 +1,10 @@
+2018-12-28 17:21:52  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:21:52
+2018-12-28 17:22:22  [ nioEventLoopGroup-2-2:30032 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:22:22
+2018-12-28 17:22:24  [ nioEventLoopGroup-2-3:32259 ] - [ ERROR ]  【客户端状态】STATUS=failed,TIME=2018-12-28 17:22:24,msg=正在尝试重连,retrys=0
+2018-12-28 17:23:09  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:23:09
+2018-12-28 17:24:57  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:24:57
+2018-12-28 17:25:27  [ nioEventLoopGroup-2-2:30095 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:25:27
+2018-12-28 17:26:24  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:26:24
+2018-12-28 17:26:54  [ nioEventLoopGroup-2-2:30234 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:26:54
+2018-12-28 17:27:24  [ nioEventLoopGroup-2-3:60241 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:27:24
+2018-12-28 17:27:54  [ nioEventLoopGroup-2-4:90252 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:27:54

@@ -1,0 +1,29 @@
+2018-12-28 17:21:52  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:21:52
+2018-12-28 17:22:22  [ nioEventLoopGroup-2-2:30032 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:22:22
+2018-12-28 17:22:22  [ nioEventLoopGroup-2-2:30235 ] - [ WARN ]  An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.setBytes(UnpooledUnsafeDirectByteBuf.java:446)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:881)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:641)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:225)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:137)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-28 17:22:24  [ nioEventLoopGroup-2-3:32259 ] - [ ERROR ]  【客户端状态】STATUS=failed,TIME=2018-12-28 17:22:24,msg=正在尝试重连,retrys=0
+2018-12-28 17:23:09  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:23:09
+2018-12-28 17:24:57  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:24:57
+2018-12-28 17:25:27  [ nioEventLoopGroup-2-2:30095 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:25:27
+2018-12-28 17:26:24  [ nioEventLoopGroup-2-1:0 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:26:24
+2018-12-28 17:26:54  [ nioEventLoopGroup-2-2:30234 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:26:54
+2018-12-28 17:27:24  [ nioEventLoopGroup-2-3:60241 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:27:24
+2018-12-28 17:27:54  [ nioEventLoopGroup-2-4:90252 ] - [ ERROR ]  【客户端状态】STATUS=ACTIVE,TIME=2018-12-28 17:27:54

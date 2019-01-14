@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.dbw</groupId>
+    <artifactId>netty-pubsub</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>broker</artifactId>
+  <name>netty-broker</name>
+  
+  <dependencies>
+        <!-- Netty -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+
+        <!-- 添加protobuf运行时依赖 -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+        </dependency>
+        <!--protobuf 工具类-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.protobuf</groupId>-->
+            <!--<artifactId>protobuf-java-util</artifactId>-->
+            <!--<version>3.5.0</version>-->
+        <!--</dependency>-->
+        <!-- Objenesis -->
+        <dependency>
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+        </dependency>
+
+        <!-- Protostuff -->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+        </dependency>
+
+        <!-- alibab fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+        </dependency>
+        
+        <dependency>
+         <groupId>cn.dbw</groupId>
+         <artifactId>netty-common</artifactId>
+         <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        
+          <dependency>
+         <groupId>org.jodd</groupId>
+        <artifactId>jodd-all</artifactId>
+        </dependency>
+        <!-- zk官方api -->
+  <dependency>
+     <groupId>org.apache.zookeeper</groupId>
+     <artifactId>zookeeper</artifactId>
+ </dependency>
+ <!-- zk好用的开源工具类 -->
+ <dependency>
+     <groupId>com.github.sgroschupf</groupId>
+     <artifactId>zkclient</artifactId>
+ </dependency>
+  </dependencies>
+     <build>
+        <plugins>
+             <!-- 打包为可执行jar插件 -->
+             <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <!-- 此处指定main方法入口的class -->
+                            <mainClass>cn.dbw.Boot</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
