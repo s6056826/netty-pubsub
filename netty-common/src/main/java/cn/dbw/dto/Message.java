@@ -28,6 +28,17 @@ public class Message implements Serializable ,Cloneable{
 	
 	private byte[] data;  //包体数据
 
+   
+	
+	
+
+	public Message(FuncodeEnum funCode, byte isHaveTopic, byte[] topic, byte[] data) {
+		this.funCode = funCode;
+		this.isHaveTopic = isHaveTopic;
+		this.topic = topic;
+		this.data = data;
+		this.bodyLength=data.length;
+	}
 
 
 	public Message(FuncodeEnum funCode, byte isHaveTopic, byte[] topic,int length, byte[] data) {
