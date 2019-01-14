@@ -66,20 +66,20 @@ public class NettyPubAndSubClient implements PubAndSubClient,Authable{
 	@Override
 	public void subscribe(String topic, SubscribListener subscribListener) {
 	    EventBus.setSubscribListener(MD5Util.getPwd(topic).substring(0, 12),subscribListener);
-	    ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.TOPIC_SUBSCRIBE, (byte)1, ecodeTopic(topic),"subscribe".getBytes().length,"subscribe".getBytes()));
+	    ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.TOPIC_SUBSCRIBE, (byte)1, ecodeTopic(topic),"subscribe".getBytes()));
 	    SubRecorder.record(MD5Util.getPwd(topic).substring(0, 12));
 	}
 
 	@Override
 	public void unsubscribe(String topic) {
 		SubRecorder.remove(MD5Util.getPwd(topic).substring(0, 12));
-	    ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.TOPIC_UNSUBSCRIBE, (byte)1, ecodeTopic(topic),"unsubscribe".getBytes().length,"unsubscribe".getBytes()));
+	    ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.TOPIC_UNSUBSCRIBE, (byte)1, ecodeTopic(topic),"unsubscribe".getBytes()));
 	}
 
 	@Override
 	public void publish(String topic,String str) {
 	    try {
-			ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.MESSAGE_SEND, (byte)1, ecodeTopic(topic),str.getBytes("utf-8").length,str.getBytes("utf-8")));
+			ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.MESSAGE_SEND, (byte)1, ecodeTopic(topic),str.getBytes("utf-8")));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,7 +89,7 @@ public class NettyPubAndSubClient implements PubAndSubClient,Authable{
 	@Override
 	public void broadcast(String data) {
 		  try {
-				ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.MESSAGE_BROAD, (byte)0, null,data.getBytes("utf-8").length,data.getBytes("utf-8")));
+				ChannelHolder.getChannel().writeAndFlush(new Message(FuncodeEnum.MESSAGE_BROAD, (byte)0, null,data.getBytes("utf-8")));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -105,7 +105,6 @@ public class NettyPubAndSubClient implements PubAndSubClient,Authable{
 	
 	
 	public void shutdown(){
-		
 		NettyClient.INSTANCE.stop();
 	}
 
